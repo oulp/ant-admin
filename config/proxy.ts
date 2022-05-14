@@ -22,8 +22,13 @@ export default {
     },
   },
   pre: {
+    '/login': {
+      target: 'https://hengli.hyer4.com',
+      changeOrigin: true,
+      pathRewrite: { '^': '' },
+    },
     '/api/': {
-      target: 'your pre url',
+      target: 'https://hengli.hyer4.com',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },

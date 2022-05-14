@@ -15,7 +15,7 @@ export default defineConfig({
   layout: {
     // https://umijs.org/zh-CN/plugins/plugin-layout
     locale: true,
-    siderWidth: 208,
+    siderWidth: 256,
     ...defaultSettings,
   },
   // https://umijs.org/zh-CN/plugins/plugin-locale
@@ -205,106 +205,16 @@ export default defineConfig({
       ],
     },
     {
-      name: 'result',
-      icon: 'CheckCircleOutlined',
-      path: '/result',
-      routes: [
-        {
-          path: '/result',
-          redirect: '/result/success',
-        },
-        {
-          name: 'success',
-          icon: 'smile',
-          path: '/result/success',
-          component: './result/success',
-        },
-        {
-          name: 'fail',
-          icon: 'smile',
-          path: '/result/fail',
-          component: './result/fail',
-        },
-      ],
-    },
-    {
-      name: 'exception',
-      icon: 'warning',
-      path: '/exception',
-      routes: [
-        {
-          path: '/exception',
-          redirect: '/exception/403',
-        },
-        {
-          name: '403',
-          icon: 'smile',
-          path: '/exception/403',
-          component: './exception/403',
-        },
-        {
-          name: '404',
-          icon: 'smile',
-          path: '/exception/404',
-          component: './exception/404',
-        },
-        {
-          name: '500',
-          icon: 'smile',
-          path: '/exception/500',
-          component: './exception/500',
-        },
-      ],
-    },
-    {
       name: 'account',
       icon: 'user',
       path: '/account',
+      hideInMenu: true,
       routes: [
-        {
-          path: '/account',
-          redirect: '/account/center',
-        },
-        {
-          name: 'center',
-          icon: 'smile',
-          path: '/account/center',
-          component: './account/center',
-        },
         {
           name: 'settings',
           icon: 'smile',
           path: '/account/settings',
           component: './account/settings',
-        },
-      ],
-    },
-    {
-      name: 'editor',
-      icon: 'highlight',
-      path: '/editor',
-      routes: [
-        {
-          path: '/editor',
-          redirect: '/editor/flow',
-        },
-        {
-          name: 'flow',
-          icon: 'smile',
-          path: '/editor/flow',
-          component: './editor/flow',
-        },
-        {
-          name: 'mind',
-          icon: 'smile',
-          path: '/editor/mind',
-          component: './editor/mind',
-        },
-        {
-          name: 'koni',
-          icon: 'smile',
-          path: '/editor/koni',
-          component: './editor/koni',
         },
       ],
     },
